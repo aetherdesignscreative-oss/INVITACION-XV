@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>INVITACION DE XV AÑOS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<main id="welcome" class="welcome">
+  <div class="paper welcome-card">
+    <div class="flowers">❀ ❦ ❀</div>
+    <p class="eyebrow">UNA CELEBRACIÓN INOLVIDABLE</p>
+    <h1 class="script">Mis XV Años</h1>
+    <div id="welcomeInitials" class="monogram">X V</div>
+    <p>Hay momentos que se vuelven eternos y personas con quienes queremos compartirlos.</p>
+    <hr>
+    <h2>Elige la melodía</h2>
+    <p class="muted">Selecciona una canción para acompañar la invitación</p>
+    <div id="songs" class="songs"></div>
+    <button class="gold-button" id="open">Abrir invitación</button>
+    <p class="tiny">CON CARIÑO, TE ESPERAMOS</p>
+  </div>
+</main>
+
+<div id="loader" class="loader hidden">
+  <div class="loader-flower">❦</div>
+  <div id="loaderInitials" class="loader-initials">X V</div>
+  <hr>
+  <p>Una noche para recordar</p>
+  <div class="dots">• • •</div>
+</div>
+
+<main id="invitation" class="invitation hidden">
+  <header>
+    <span id="miniInitials" class="mini-initials">X V</span>
+    <button id="musicToggle" class="round">♫</button>
+  </header>
+
+  <nav id="nav" class="nav">
+    <button data-screen="cover">Invitación</button>
+    <button data-screen="ceremony">Celebración</button>
+    <button data-screen="itinerary">Programa</button>
+    <button data-screen="gallery">Fotos</button>
+    <button data-screen="details">Información</button>
+  </nav>
+
+  <section id="cover" class="paper section">
+    <div class="flowers">❀ ❦ ❀</div>
+    <p class="eyebrow">CON LA BENDICIÓN DE DIOS Y DE MIS PADRES</p>
+    <h1 class="script">Mis XV Años</h1>
+    <div class="crown">♕</div>
+    <h2 class="script name" data-field="name">Ximena</h2>
+    <div class="portrait">
+      <img src="assets/img/fotos/XV 1.png" alt="Fotografía de la quinceañera">
+    </div>
+    <p class="poem">Hay momentos inolvidables que se atesoran en el corazón para siempre. Hoy es uno de ellos y quiero celebrarlo contigo.</p>
+    <hr>
+    <p class="eyebrow">MIS PADRES</p>
+    <p data-field="parents">Nombres de los padres</p>
+    <p class="eyebrow">MIS PADRINOS</p>
+    <p data-field="godparents">Nombres de los padrinos</p>
+    <p class="eyebrow">TE INVITO A CELEBRAR MIS</p>
+    <h2>XV AÑOS</h2>
+    <div class="date">
+      <span id="weekday">SÁBADO</span>
+      <strong id="day">14</strong>
+      <span id="monthYear">FEBRERO 2027</span>
+    </div>
+    <div class="countdown">
+      <div><strong id="days">00</strong><small>DÍAS</small></div>
+      <div><strong id="hours">00</strong><small>HORAS</small></div>
+      <div><strong id="minutes">00</strong><small>MINUTOS</small></div>
+      <div><strong id="seconds">00</strong><small>SEGUNDOS</small></div>
+    </div>
+    <button id="calendar" class="text-button">♡ Guardar la fecha</button>
+  </section>
+
+  <section id="ceremony" class="paper section hidden">
+    <p class="eyebrow">NOS UNIRÁ LA ALEGRÍA</p>
+    <h2 class="script">La celebración</h2>
+    <div class="portrait">
+      <img src="assets/img/fotos/XV 2.png" alt="Fotografía de la celebración">
+    </div>
+    <div class="detail">
+      <div class="symbol">♧</div>
+      <h2>Ceremonia religiosa</h2>
+      <p data-field="church">Iglesia Sagrado Corazón</p>
+      <p data-field="churchTime">6:00 PM</p>
+      <div id="churchMap" class="map-card"><iframe title="Ubicación de la ceremonia" src="https://maps.google.com/maps?q=Plaza%20Cayala%2C%20Zona%2016%2C%20Guatemala&output=embed" loading="lazy" allowfullscreen></iframe><span>📍 Plaza Cayalá · Zona 16</span></div>
+    </div>
+    <hr>
+    <div class="detail">
+      <div class="symbol">♕</div>
+      <h2>Recepción</h2>
+      <p data-field="venue">Salón de eventos</p>
+      <p data-field="venueTime">7:00 PM</p>
+      <div id="venueMap" class="map-card"><iframe title="Ubicación de la recepción" src="https://maps.google.com/maps?q=Plaza%20Cayala%2C%20Zona%2016%2C%20Guatemala&output=embed" loading="lazy" allowfullscreen></iframe><span>📍 Plaza Cayalá · Zona 16</span></div>
+    </div>
+  </section>
+
+  <section id="itinerary" class="paper section hidden">
+    <p class="eyebrow">CADA MOMENTO ES ESPECIAL</p>
+    <h2 class="script">Itinerario de actividades</h2>
+    <div id="timeline" class="timeline"></div>
+  </section>
+
+  <section id="gallery" class="paper section hidden">
+    <p class="eyebrow">RECUERDOS QUE VIVEN PARA SIEMPRE</p>
+    <h2 class="script">Mi galería</h2>
+    <div id="galleryGrid" class="gallery"></div>
+    <p class="muted">Toca una fotografía para verla en grande.</p>
+  </section>
+
+  <section id="details" class="paper section hidden">
+    <p class="eyebrow">UN DETALLE CON CARIÑO</p>
+    <h2 class="script">Mesa de regalos</h2>
+    <p class="poem" data-field="giftMessage">Tu presencia es mi mejor regalo.</p>
+    <hr>
+    <h2 class="script">Código de vestimenta</h2>
+    <p data-field="dressCode">Formal</p>
+    <p class="muted" data-field="dressNote">Evita el color reservado para la quinceañera.</p>
+    <hr>
+    <h2 class="script">Confirma tu asistencia</h2>
+    <p>Será una alegría compartir este día contigo.</p>
+    <button class="gold-button" id="rsvp">Confirmar asistencia</button>
+  </section>
+
+  <footer class="paper section closing">
+    <div class="portrait">
+      <img src="assets/img/fotos/XV 3.png" alt="Recuerdo de la quinceañera">
+    </div>
+    <h2 class="script">¡Te espero!</h2>
+    <p data-field="name">Ximena</p>
+    <hr>
+    <p class="tiny">GRACIAS POR SER PARTE DE ESTE DÍA TAN ESPECIAL</p>
+    <button class="text-button" id="backTop">Volver al inicio ♡</button>
+  </footer>
+</main>
+
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+  <div class="modal-card">
+    <button id="modalClose" class="close">×</button>
+    <h2 id="modalTitle" class="script">Con cariño</h2>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<audio id="audio" loop preload="none"></audio>
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+<script src="js/rsvp-fix.js"></script>
+</body>
+</html>
+
+
